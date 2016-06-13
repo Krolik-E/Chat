@@ -50,4 +50,17 @@ a {
         max-width: 27.5rem;
         width: 100%;
     }
+
+    @desc chat {
+        margin: 2rem 3rem 0;
+        width: 100%;
+
+    }
+
+    @desc aside {
+        max-width: 34.8rem;
+        width: 100%;
+        background-color: #fff;
+        margin-top: 2rem;
+    }
 }

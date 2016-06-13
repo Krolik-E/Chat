@@ -1,0 +1,32 @@
+@component chat {
+    @desc head {
+        border-bottom: 0.1rem solid #edf0f2;
+        width: 100%;
+        padding: 1.5rem 0;
+    }
+}
+
+@component inline-li {
+    display: flex;
+    justify-content: flex-end;
+
+    @desc item {
+        margin-left: 1.8rem;
+    }
+}
+
+@component btn-nav {
+    padding: 1.5rem;
+
+    @modifier call {
+        background: url("../img/icn-call.png") no-repeat center;
+    }
+
+    @modifier video {
+        background: url("../img/icn-videocall.png") no-repeat center;
+    }
+
+    @modifier menu {
+        background: url("../img/icn-menu.png") no-repeat center;
+    }
+}
