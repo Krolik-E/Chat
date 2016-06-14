@@ -83,6 +83,7 @@ a
 {
     width: 100%;
     max-width: 34.8rem;
+    height: 66rem;
     margin-top: 2rem;
 
     background-color: #fff;
@@ -214,47 +215,25 @@ a
 {
     font-size: 1.2rem;
     font-weight: 700;
+    line-height: 1;
 
     position: absolute;
-    z-index: 0;
-    top: -.4rem;
-    right: .3rem;
+    top: -.6rem;
+    right: -.4rem;
+
+    padding: .4rem .7rem;
 
     color: #fff;
-}
-
-.c-contact-img__new-msgs:before
-{
-    position: absolute;
-    z-index: -1;
-    top: -.2rem;
-    left: -.7rem;
-
-    width: 2rem;
-    height: 2rem;
-
-    content: '\0020';
-
-    border-radius: 50%;
+    border-radius: 1rem;
     background-color: #3198db;
-    box-shadow: 0 2px 10px rgba(49, 152, 219, .5);
+    box-shadow: 0 .2rem 1rem rgba(49, 152, 219, .5);
 }
 
-.c-text-info
+
+
+.c-text-info_non-active
 {
-    position: relative;
-}
-
-.c-text-info_non-active:before
-{
-    position: absolute;
-
-    width: 100%;
-    height: 100%;
-
-    content: '\0020';
-
-    background-color: rgba(255, 255, 255, .4);
+    opacity: .6;
 }
 
 .c-text-info__name
@@ -313,13 +292,13 @@ a
 .c-state_online
 {
     background-color: #51dacf;
-    box-shadow: 0 2px 4px #51dacf;
+    box-shadow: 0 .2rem .4rem #51dacf;
 }
 
 .c-state_offline
 {
     background-color: #d4e1ea;
-    box-shadow: 0 1px 5px #c9d6df;
+    box-shadow: 0 .1rem .5rem #c9d6df;
 }
 
 .c-state_chat
@@ -329,7 +308,12 @@ a
     margin-bottom: 0;
 }
 
+.c-chat
+{
+    position: relative;
 
+    height: 100%;
+}
 
 .c-chat__head
 {
@@ -337,6 +321,19 @@ a
     padding: 1.5rem 0;
 
     border-bottom: .1rem solid #edf0f2;
+}
+
+.c-chat__content
+{
+    padding-top: 1.5rem;
+}
+
+.c-chat__new-msg
+{
+    position: absolute;
+    bottom: 0;
+
+    width: 100%;
 }
 
 .c-inline-li
@@ -372,4 +369,167 @@ a
 .c-btn-nav_menu
 {
     background: url('../img/icn-menu.png') no-repeat center;
+}
+
+.c-chat-msgs
+{
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+.c-chat-msgs__item
+{
+    margin-bottom: 1.2rem;
+}
+
+.c-chat-msgs__item_outbox
+{
+    -ms-flex-item-align: end;
+    align-self: flex-end;
+}
+
+.c-chat-msgs__item_outbox .c-chat-msg
+{
+    -ms-flex-direction: row-reverse;
+    flex-direction: row-reverse;
+}
+
+.c-chat-msg
+{
+    display: -ms-flexbox;
+    display: flex;
+
+    -ms-flex-align: center;
+
+    align-items: center;
+}
+
+.c-chat-msg__avatar
+{
+    -ms-flex-item-align: baseline;
+    align-self: baseline;
+}
+
+.c-msg
+{
+    position: relative;
+
+    max-width: 35rem;
+    padding: 1.2rem 1.5rem;
+
+    border-radius: 2rem;
+}
+
+.c-msg_outbox
+{
+    margin-right: 2.5rem;
+
+    color: #fefefe;
+    background-color: #3598db;
+}
+
+.c-msg_outbox:before
+{
+    position: absolute;
+    top: 50%;
+    right: -.7rem;
+
+    width: 1.5rem;
+    height: 1.4rem;
+    margin-top: -.7rem;
+
+    content: '\0020';
+
+    background: url('../img/triangle-bl.png') no-repeat center;
+}
+
+.c-msg_inbox
+{
+    margin-left: 2.5rem;
+
+    color: #8ea1b4;
+    background-color: #fff;
+}
+
+.c-msg_inbox:before
+{
+    position: absolute;
+    top: 50%;
+    left: -.7rem;
+
+    width: 1.5rem;
+    height: 1.4rem;
+    margin-top: -.7rem;
+
+    content: '\0020';
+
+    background: url('../img/triangle-wh.png') no-repeat center;
+}
+
+.c-msg__text
+{
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+}
+
+.c-new-msg
+{
+    display: -ms-flexbox;
+    display: flex;
+
+    width: 100%;
+
+    border-radius: .5rem;
+    background-color: #fff;
+    box-shadow: 0 0 2.5rem rgba(53, 152, 219, .05);
+
+    -ms-flex-pack: justify;
+
+    justify-content: space-between;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-preferred-size: 0;
+    flex-basis: 0;
+}
+
+.c-new-msg__input
+{
+    padding: 2.3rem;
+
+    border: none;
+    background-color: #fff;
+
+    -ms-flex-positive: 1;
+
+    flex-grow: 1;
+}
+
+.c-new-msg__input:focus
+{
+    outline: none;
+}
+
+.c-new-msg__btns
+{
+    margin-right: 1.5rem;
+}
+
+.c-btn
+{
+    padding: 2rem;
+}
+
+.c-btn_attach
+{
+    background: url('../img/icn-attach.png') no-repeat center;
+}
+
+.c-btn_send
+{
+    border-radius: 50%;
+    background: url('../img/icn-send.png') no-repeat center;
+    background-color: #3598db;
+    box-shadow: 0 .3rem 1.5rem rgba(53, 152, 219, .3);
 }

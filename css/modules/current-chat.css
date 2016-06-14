@@ -1,8 +1,21 @@
 @component chat {
+    position: relative;
+    height: 100%;
+
     @desc head {
         border-bottom: 0.1rem solid #edf0f2;
         width: 100%;
         padding: 1.5rem 0;
+    }
+
+    @desc content {
+        padding-top: 1.5rem;
+    }
+
+    @desc new-msg {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
     }
 }
 
@@ -28,5 +41,119 @@
 
     @modifier menu {
         background: url("../img/icn-menu.png") no-repeat center;
+    }
+}
+
+@component chat-msgs{
+    display: flex;
+    flex-direction: column;
+
+
+    @desc item {
+    margin-bottom: 1.2rem;
+
+        @modifier outbox {
+            align-self: flex-end;
+
+            & .c-chat-msg {
+                flex-direction: row-reverse;
+            }
+        }
+    }
+}
+
+@component chat-msg{
+    display: flex;
+    align-items: center;
+
+    @desc avatar {
+        align-self: baseline;
+    }
+}
+
+@component msg {
+    border-radius: 2rem;
+    max-width: 35rem;
+    padding: 1.2rem 1.5rem;
+    position: relative;
+
+    @modifier outbox {
+        background-color: #3598db;
+        margin-right: 2.5rem;
+        color: #fefefe;
+
+        &:before {
+            content: '\0020';
+            height: 1.4rem;
+            width: 1.5rem;
+            position: absolute;
+            top: 50%;
+            right: -0.7rem;
+            margin-top: -0.7rem;
+            background: url('../img/triangle-bl.png') no-repeat center;
+        }
+    }
+
+    @modifier inbox {
+        background-color: #ffffff;
+        margin-left: 2.5rem;
+        color: #8ea1b4;
+
+        &:before {
+            content: '\0020';
+            height: 1.4rem;
+            width: 1.5rem;
+            position: absolute;
+            top: 50%;
+            left: -0.7rem;
+            margin-top: -0.7rem;
+            background: url('../img/triangle-wh.png') no-repeat center;
+        }
+    }
+
+    @desc text {
+        font-size: 1.2rem;
+        line-height: 1.6rem;
+    }
+}
+
+@component new-msg {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-basis: 0;
+    width: 100%;
+    background-color: #ffffff;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 2.5rem rgba(53, 152, 219, 0.05);
+
+    @desc input {
+        border: none;
+        background-color: #fff;
+        padding: 2.3rem;
+        flex-grow: 1;
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    @desc btns {
+        margin-right: 1.5rem;
+    }
+}
+
+@component btn {
+    padding: 2rem;
+
+    @modifier attach {
+        background: url('../img/icn-attach.png') no-repeat center;
+    }
+
+    @modifier send {
+        background-color: #3598db;
+        box-shadow: 0 .3rem 1.5rem rgba(53, 152, 219, 0.3);
+        background: url('../img/icn-send.png') no-repeat center;
+        border-radius: 50%;
     }
 }
