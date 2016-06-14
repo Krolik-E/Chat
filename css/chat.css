@@ -511,6 +511,14 @@ a
     outline: none;
 }
 
+.c-new-msg__input::-webkit-input-placeholder
+{
+    font-family: 'Lato', sans-serif;
+    font-size: 1.2rem;
+
+    color: #8ea1b4;
+}
+
 .c-new-msg__btns
 {
     margin-right: 1.5rem;
