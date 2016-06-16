@@ -38,9 +38,23 @@ a {
         background-color: #f5f6f8;
         padding: 0 3rem 2rem 9.8rem;
         display: flex;
-        justify-content: space-between;
         align-items: stretch;
     }
+
+    @desc aside {
+        max-width: 34.8rem;
+        width: 100%;
+        background-color: #fff;
+        margin-top: 2rem;
+        height: 66rem;
+    }
+}
+
+@component chat-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    flex-grow: 1;
 
     @desc contacts {
         margin-top: 2rem;
@@ -55,13 +69,5 @@ a {
         margin: 2rem 3rem 0;
         width: 100%;
 
-    }
-
-    @desc aside {
-        max-width: 34.8rem;
-        width: 100%;
-        background-color: #fff;
-        margin-top: 2rem;
-        height: 66rem;
     }
 }

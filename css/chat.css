@@ -55,28 +55,9 @@ a
 
     background-color: #f5f6f8;
 
-    -ms-flex-pack: justify;
-
-    justify-content: space-between;
     -ms-flex-align: stretch;
+
     align-items: stretch;
-}
-
-.c-page__contacts
-{
-    width: 100%;
-    max-width: 27.5rem;
-    margin-top: 2rem;
-
-    border-radius: 3px;
-    background-color: #fff;
-    box-shadow: 0 0 25px rgba(53, 152, 219, .1);
-}
-
-.c-page__chat
-{
-    width: 100%;
-    margin: 2rem 3rem 0;
 }
 
 .c-page__aside
@@ -87,6 +68,37 @@ a
     margin-top: 2rem;
 
     background-color: #fff;
+}
+
+.c-chat-box
+{
+    display: -ms-flexbox;
+    display: flex;
+
+    -ms-flex-pack: justify;
+
+    justify-content: space-between;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+}
+
+.c-chat-box__contacts
+{
+    width: 100%;
+    max-width: 27.5rem;
+    margin-top: 2rem;
+
+    border-radius: 3px;
+    background-color: #fff;
+    box-shadow: 0 0 25px rgba(53, 152, 219, .1);
+}
+
+.c-chat-box__chat
+{
+    width: 100%;
+    margin: 2rem 3rem 0;
 }
 
 
